@@ -44,7 +44,7 @@ def f2(x, y):
 
 def gradiente_f2(x, y):
     """Gradiente de f2: vector de derivadas parciales."""
-    return np.array([2*(x-3),2*(y+2)])
+    return np.array([2*(x-3) * 1,2*(y+2) * 1])
 
 
 def descenso_gradiente(grad_func, punto_inicial, tasa_aprendizaje, iteraciones):
@@ -124,7 +124,7 @@ with st.sidebar:
 
     eta = st.slider(
         "Tasa de aprendizaje (η)",
-        min_value=0.01, max_value=2.0, value=0.1, step=0.01,
+        min_value=0.01, max_value=1.1, value=0.1, step=0.01,
         help="Qué tan grande es cada paso del descenso.",
     )
     x0 = st.slider("Punto inicial x₀", -4.0, 4.0, 2.5, 0.1)
